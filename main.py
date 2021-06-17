@@ -24,7 +24,7 @@ def voice_recognition():
 
     with sr.Microphone() as source:
         audio = r.listen(source)
-        print(source)
+        print(source, 'this is response')
         said = " "
         print('ready')
 
@@ -42,13 +42,13 @@ answer01 = ''
 while True:
     text = voice_recognition()
     print(text)
-    if "a" in text:
-        answer01 = 'hihihihihihihihihihihihi'
-        reply(answer01, i)
+    if "hi Bixby" in text:
+        answer01 = 'hello world'
+        print(answer01)
+        # reply(answer01, i)
 
-        i = i + 1
+        # i = i + 1
     elif "bye" in text:
         break
 
     list01.append(answer01 + str(i - 1) + '.mp3')
-
